@@ -18755,3 +18755,848 @@ Completed 200 OK in 708ms (Views: 10.5ms | ActiveRecord: 0.5ms)
 Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 11:40:34 -0500
 Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 16:31:52 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (51.1ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (0.7ms)[0m  SELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (21.9ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_header.html.erb (25.9ms)
+  [1m[35mDocumentparent Load (0.4ms)[0m  SELECT "documentparents".* FROM "documentparents" 
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_column_headings.html.erb (6.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_messages.html.erb (20.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (4.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (7.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (115.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_pagination.html.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list.html.erb (168.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_with_header.html.erb (218.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/list.html.erb within layouts/application (267.2ms)
+Compiled bootstrap_and_overrides.css  (834ms)  (pid 6291)
+Compiled active_scaffold_layout.css  (0ms)  (pid 6291)
+Compiled jquery-ui.css  (0ms)  (pid 6291)
+Compiled active_scaffold_extensions.css  (0ms)  (pid 6291)
+Compiled active_scaffold.css  (717ms)  (pid 6291)
+Compiled account.css  (0ms)  (pid 6291)
+Compiled accounts.css  (1ms)  (pid 6291)
+Compiled active_scaffold-ie.css  (23ms)  (pid 6291)
+Compiled active_scaffold_colors.css  (72ms)  (pid 6291)
+Compiled active_scaffold_images.css  (4ms)  (pid 6291)
+Compiled addresses.css  (1ms)  (pid 6291)
+Compiled admins/bootstrap.css  (0ms)  (pid 6291)
+Compiled admins/login.css  (0ms)  (pid 6291)
+Compiled admins/form.css  (0ms)  (pid 6291)
+Compiled admins/button.css  (0ms)  (pid 6291)
+Compiled admins/icons.css  (0ms)  (pid 6291)
+Compiled admins/bootstrap-login.min.css  (0ms)  (pid 6291)
+Compiled admins/jquery.ui.all.css  (7ms)  (pid 6291)
+Compiled admins/jquery-ui.custom.css  (0ms)  (pid 6291)
+Compiled admins/jquery-ui-timepicker.css  (0ms)  (pid 6291)
+Compiled admins/uniform.default.css  (0ms)  (pid 6291)
+Compiled admins/circular-stat.css  (0ms)  (pid 6291)
+Compiled admins/fullcalendar.css  (0ms)  (pid 6291)
+Compiled admins/fullcalendar.print.css  (0ms)  (pid 6291)
+Compiled fonts/icomoon/style.css  (0ms)  (pid 6291)
+Compiled admins/main-style.css  (0ms)  (pid 6291)
+Compiled admins/layout.css  (0ms)  (pid 6291)
+Compiled admins/wizard.css  (0ms)  (pid 6291)
+Compiled admins.css  (614ms)  (pid 6291)
+Compiled admins/admins.bootstrap-login.min.css  (0ms)  (pid 6291)
+Compiled admins/admins.uniform.default.css  (0ms)  (pid 6291)
+Compiled admins/bootstrap-login.css  (0ms)  (pid 6291)
+Compiled admins/bootstrap-responsive.css  (0ms)  (pid 6291)
+Compiled admins/bootstrap-responsive.min.css  (0ms)  (pid 6291)
+Compiled admins/bootstrap.min.css  (0ms)  (pid 6291)
+Compiled admins/customizer.css  (0ms)  (pid 6291)
+Compiled admins/demo.css  (0ms)  (pid 6291)
+Compiled admins/docs.css  (0ms)  (pid 6291)
+Compiled admins/elfinder.css  (0ms)  (pid 6291)
+Compiled admins/error.css  (0ms)  (pid 6291)
+Compiled admins/error.min.css  (0ms)  (pid 6291)
+Compiled admins/gallery.css  (0ms)  (pid 6291)
+Compiled admins/jquery.ibutton.css  (0ms)  (pid 6291)
+Compiled admins/login-style.css  (0ms)  (pid 6291)
+Compiled admins/login.min.css  (0ms)  (pid 6291)
+Compiled admins/lt-ie9.css  (0ms)  (pid 6291)
+Compiled admins/mail.css  (0ms)  (pid 6291)
+Compiled admins/minicolors.css  (0ms)  (pid 6291)
+Compiled admins/misc.css  (0ms)  (pid 6291)
+Compiled admins/mooncake.min.css  (0ms)  (pid 6291)
+Compiled admins/plugins/elfinder.css  (0ms)  (pid 6291)
+Compiled admins/plugins/fullcalendar.css  (0ms)  (pid 6291)
+Compiled admins/plugins/minicolors.css  (0ms)  (pid 6291)
+Compiled admins/plugins/plugins.min.css  (0ms)  (pid 6291)
+Compiled admins/profile.css  (0ms)  (pid 6291)
+Compiled admins/statistic.css  (0ms)  (pid 6291)
+Compiled admins/table.css  (0ms)  (pid 6291)
+Compiled admins/ui.css  (0ms)  (pid 6291)
+Compiled admins/utils.css  (0ms)  (pid 6291)
+Compiled admins/widget.css  (0ms)  (pid 6291)
+Compiled dashboard.css  (18ms)  (pid 6291)
+Compiled documentparts.css  (1ms)  (pid 6291)
+Compiled gray-theme.css  (0ms)  (pid 6291)
+Compiled scaffolds.css  (10ms)  (pid 6291)
+Compiled simple_form.css  (0ms)  (pid 6291)
+Compiled style.css  (0ms)  (pid 6291)
+Compiled application.css  (2726ms)  (pid 6291)
+Compiled admins/jquery-1.8.2.min.js  (1ms)  (pid 6291)
+Compiled admins/bootstrap.js  (0ms)  (pid 6291)
+Compiled admins/jquery.placeholder.js  (0ms)  (pid 6291)
+Compiled admins/jquery.mousewheel.js  (0ms)  (pid 6291)
+Compiled admins/template.js  (0ms)  (pid 6291)
+Compiled admins/setup.js  (0ms)  (pid 6291)
+Compiled admins/customizer.js  (0ms)  (pid 6291)
+Compiled admins/jquery.uniform.js  (0ms)  (pid 6291)
+Compiled admins/jquery-ui-1.8.24.js  (2ms)  (pid 6291)
+Compiled admins/jquery-ui.custom.js  (0ms)  (pid 6291)
+Compiled admins/jquery-ui-timepicker.js  (0ms)  (pid 6291)
+Compiled admins/jquery.ui.touch-punch.js  (0ms)  (pid 6291)
+Compiled admins/excanvas.js  (0ms)  (pid 6291)
+Compiled admins/jquery.flot.js  (1ms)  (pid 6291)
+Compiled admins/plugins/jquery.flot.tooltip.min.js  (0ms)  (pid 6291)
+Compiled admins/plugins/jquery.flot.pie.min.js  (0ms)  (pid 6291)
+Compiled admins/plugins/jquery.flot.resize.min.js  (0ms)  (pid 6291)
+Compiled admins/circular-stat.js  (0ms)  (pid 6291)
+Compiled admins/jquery.sparkline.js  (1ms)  (pid 6291)
+Compiled admins/jquery.ibutton.js  (0ms)  (pid 6291)
+Compiled admins/fullcalendar.js  (1ms)  (pid 6291)
+Compiled admins/jquery.dataTables.js  (2ms)  (pid 6291)
+Compiled admins/TableTools/TableTools.js  (0ms)  (pid 6291)
+Compiled admins/dataTables.bootstrap.js  (0ms)  (pid 6291)
+Compiled admins/dashboard.js  (0ms)  (pid 6291)
+Compiled admins/jquery.validate.min.js  (0ms)  (pid 6291)
+Compiled admins/wizard.min.js  (0ms)  (pid 6291)
+Compiled admins/jquery.form.min.js  (0ms)  (pid 6291)
+Compiled admins/form_wizard.js  (0ms)  (pid 6291)
+Compiled jquery.js  (3ms)  (pid 6291)
+Compiled jquery-ui.js  (40ms)  (pid 6291)
+Compiled jquery_ujs.js  (0ms)  (pid 6291)
+Compiled jquery-ui-timepicker-addon.js  (0ms)  (pid 6291)
+Compiled jquery/active_scaffold.js  (0ms)  (pid 6291)
+Compiled jquery/jquery.editinplace.js  (0ms)  (pid 6291)
+ActiveScaffold: Missing datetime picker localization for your locale: en
+Compiled jquery/date_picker_bridge.js  (5ms)  (pid 6291)
+Compiled jquery/draggable_lists.js  (0ms)  (pid 6291)
+Compiled active_scaffold.js  (168ms)  (pid 6291)
+Compiled application.js  (2028ms)  (pid 6291)
+  Rendered shared/_user_nav.html.haml (1.6ms)
+Completed 200 OK in 5533ms (Views: 5391.6ms | ActiveRecord: 74.9ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (0.4ms)[0m  SELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (0.3ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_header.html.erb (5.1ms)
+  [1m[35mDocumentparent Load (0.4ms)[0m  SELECT "documentparents".* FROM "documentparents" 
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_column_headings.html.erb (5.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_messages.html.erb (3.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (138.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_pagination.html.erb (0.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list.html.erb (163.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_with_header.html.erb (175.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/list.html.erb within layouts/application (178.9ms)
+  Rendered shared/_user_nav.html.haml (0.5ms)
+Completed 200 OK in 224ms (Views: 218.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/account.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /account.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /application.css - 304 Not Modified (59ms)
+
+
+Started GET "/assets/active_scaffold-ie.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold-ie.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold_colors.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold_colors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold_extensions.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold_extensions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold_images.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold_images.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold_layout.css?body=1" for 127.0.0.1 at 2012-12-15 16:31:59 -0500
+Served asset /active_scaffold_layout.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/login.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/login.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/addresses.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /addresses.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/form.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/form.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/button.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/button.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/icons.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/icons.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap-login.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/bootstrap-login.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-ui.custom.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/jquery-ui.custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.ui.all.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/jquery.ui.all.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-ui-timepicker.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/jquery-ui-timepicker.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/uniform.default.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/uniform.default.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admins/fullcalendar.print.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/fullcalendar.print.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/fullcalendar.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/fullcalendar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/circular-stat.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/circular-stat.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/fonts/icomoon/style.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /fonts/icomoon/style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/main-style.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/main-style.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/layout.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/layout.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/wizard.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/wizard.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/admins/admins.bootstrap-login.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/admins.bootstrap-login.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/admins.uniform.default.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:00 -0500
+Served asset /admins/admins.uniform.default.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap-login.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/bootstrap-login.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/bootstrap-responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/bootstrap-responsive.min.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admins/docs.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/docs.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/customizer.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/customizer.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/demo.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/demo.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/elfinder.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/elfinder.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/error.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/error.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/error.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/error.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/gallery.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/gallery.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.ibutton.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.ibutton.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/login-style.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/login-style.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/login.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/login.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/lt-ie9.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/lt-ie9.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/mail.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/mail.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/minicolors.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/minicolors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/misc.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/misc.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/mooncake.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/mooncake.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/elfinder.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/elfinder.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/fullcalendar.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/fullcalendar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/minicolors.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/minicolors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/plugins.min.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/plugins.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/profile.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/profile.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/statistic.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/statistic.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/table.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/table.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/ui.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/ui.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/utils.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/utils.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/widget.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/widget.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /dashboard.css - 304 Not Modified (83ms)
+
+
+Started GET "/assets/documentparts.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /documentparts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gray-theme.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /gray-theme.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_form.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /simple_form.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-1.8.2.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery-1.8.2.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.placeholder.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/template.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/template.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.mousewheel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/setup.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/setup.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/customizer.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/customizer.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.uniform.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.uniform.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery-ui.custom.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery-ui.custom.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery-ui-1.8.24.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery-ui-1.8.24.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery-ui-timepicker.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery-ui-timepicker.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery.ui.touch-punch.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.ui.touch-punch.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/excanvas.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/excanvas.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.flot.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.flot.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/jquery.flot.tooltip.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.pie.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/jquery.flot.pie.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.resize.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/plugins/jquery.flot.resize.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/circular-stat.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/circular-stat.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.sparkline.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.sparkline.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/jquery.ibutton.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.ibutton.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/fullcalendar.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/fullcalendar.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/jquery.dataTables.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.dataTables.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/TableTools/TableTools.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/TableTools/TableTools.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/dataTables.bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/dashboard.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/dashboard.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.validate.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.validate.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/wizard.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/wizard.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery.form.min.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/jquery.form.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/form_wizard.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:01 -0500
+Served asset /admins/form_wizard.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery-ui.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery/active_scaffold.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (55ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /jquery/draggable_lists.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /active_scaffold.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/admins/jquery.ui.base.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/jquery.ui.base.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admins/jquery.ui.base.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/admins/jquery.ui.theme.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/jquery.ui.theme.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admins/jquery.ui.theme.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/admins/layout.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/widget.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/widget.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/form.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/form.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/table.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/table.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/button.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/button.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/misc.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/misc.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/utils.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/utils.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/ui.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/ui.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/admins/icons.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/icons.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/statistic.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/statistic.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/mail.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/mail.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/profile.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/profile.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/gallery.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/gallery.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/plugins/elfinder.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/plugins/elfinder.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admins/plugins/fullcalendar.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/plugins/fullcalendar.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/minicolors.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/plugins/minicolors.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/lt-ie9.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/lt-ie9.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/demo.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/demo.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/customizer.css" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /admins/customizer.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_scaffold/magnifier.png" for 127.0.0.1 at 2012-12-15 16:32:02 -0500
+Served asset /active_scaffold/magnifier.png - 304 Not Modified (19ms)
+
+
+Started GET "/assets/logosunray.png" for 127.0.0.1 at 2012-12-15 16:32:03 -0500
+Served asset /logosunray.png - 304 Not Modified (48ms)
+
+
+Started GET "/assets/active_scaffold/add.png" for 127.0.0.1 at 2012-12-15 16:32:03 -0500
+Served asset /active_scaffold/add.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/layout/bg/retina_wood.png" for 127.0.0.1 at 2012-12-15 16:32:03 -0500
+Served asset /admins/layout/bg/retina_wood.png - 304 Not Modified (16ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:03 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (4ms)
+
+
+Started GET "/documentparts?association=documentparts&document_id=5&parent_scaffold=documents&adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 16:32:07 -0500
+Processing by DocumentpartsController#index as JS
+  Parameters: {"association"=>"documentparts", "document_id"=>"5", "parent_scaffold"=>"documents", "adapter"=>"_list_inline_adapter"}
+  [1m[36mDocument Load (0.6ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36m (65.4ms)[0m  [1mSELECT COUNT(*) FROM "documentparts" WHERE "documentparts"."document_id" = 5[0m
+  [1m[35mDocumentpart Load (0.5ms)[0m  SELECT "documentparts".* FROM "documentparts" WHERE "documentparts"."document_id" = 5 ORDER BY "documentparts"."position" ASC LIMIT 15 OFFSET 0
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_header.html.erb (7.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_column_headings.html.erb (4.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_messages.html.erb (6.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (215.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (8.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (2.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (270.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_pagination.html.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list.html.erb (302.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_with_header.html.erb (320.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (6.6ms)
+Completed 200 OK in 587ms (Views: 52.5ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:07 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documentparts/new?association=documentparts&document_id=5&parent_scaffold=documents&adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 16:32:10 -0500
+Processing by DocumentpartsController#new as JS
+  Parameters: {"association"=>"documentparts", "document_id"=>"5", "parent_scaffold"=>"documents", "adapter"=>"_list_inline_adapter"}
+  [1m[36mDocument Load (0.5ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1  [["id", "5"]]
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_messages.html.erb (0.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (1.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.7ms)
+  Rendered documentparts/_form.html.erb (23.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_base_form.html.erb (46.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_create_form.html.erb (52.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (5.2ms)
+Completed 200 OK in 102ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:10 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documents/5/row?_method=get" for 127.0.0.1 at 2012-12-15 16:32:33 -0500
+Processing by DocumentsController#row as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mDocument Load (0.4ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mDocumentparent Load (43.9ms)[0m  SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (8.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (23.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_row.html.erb (28.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_update_calculations.js.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/row.js.erb (48.2ms)
+Completed 200 OK in 111ms (Views: 63.4ms | ActiveRecord: 44.3ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:33 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documents/6?adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 16:32:35 -0500
+Processing by DocumentsController#show as JS
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"6"}
+  [1m[36mDocument Load (0.3ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mDocumentparent Load (0.5ms)[0m  SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" = 5 LIMIT 1
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show_columns.html.erb (3.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show_columns.html.erb (12.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show.html.erb (23.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (6.0ms)
+Completed 200 OK in 67ms (Views: 11.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:35 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
