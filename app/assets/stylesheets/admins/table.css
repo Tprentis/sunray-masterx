@@ -473,7 +473,7 @@ table tr .action-col
     }
 
     .table-flipscroll th:first-child, 
-	.table td: first-child
+	.table td:first-child
     {
         border-top: none !important;
     }

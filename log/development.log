@@ -19600,3 +19600,1426 @@ Completed 200 OK in 67ms (Views: 11.0ms | ActiveRecord: 0.9ms)
 
 Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 16:32:35 -0500
 Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 17:44:03 -0500
+
+ActionController::RoutingError (undefined method `page_links_inner_window=' for #<ActiveScaffold::Config::List:0x007fb7fd46aa20>):
+  app/controllers/documents_controller.rb:8:in `block in <class:DocumentsController>'
+  app/controllers/documents_controller.rb:5:in `<class:DocumentsController>'
+  app/controllers/documents_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 17:44:38 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (150.3ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (181.7ms)[0m  SELECT "documents".* FROM "documents" WHERE (1=1) ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (99.6ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  [1m[35mEXPLAIN (0.5ms)[0m  EXPLAIN SELECT "documents".* FROM "documents" WHERE (1=1) ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mEXPLAIN (0.3ms)[0m  [1mEXPLAIN SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+EXPLAIN for: SELECT  "documents".* FROM "documents"  WHERE (1=1) ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+                                QUERY PLAN
+--------------------------------------------------------------------------
+ Limit  (cost=11.04..11.07 rows=15 width=2162)
+   ->  Sort  (cost=11.04..11.11 rows=30 width=2162)
+         Sort Key: state
+         ->  Seq Scan on documents  (cost=0.00..10.30 rows=30 width=2162)
+(4 rows)
+
+EXPLAIN for: SELECT "documentparents".* FROM "documentparents"  WHERE "documentparents"."id" IN (7, 5, 6)
+                            QUERY PLAN
+------------------------------------------------------------------
+ Seq Scan on documentparents  (cost=0.00..11.93 rows=3 width=536)
+   Filter: (id = ANY ('{7,5,6}'::integer[]))
+(2 rows)
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_header.html.erb (83.6ms)
+  [1m[35mDocumentparent Load (0.4ms)[0m  SELECT "documentparents".* FROM "documentparents" 
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_column_headings.html.erb (8.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_messages.html.erb (0.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_messages.html.erb (8.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (2.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (3.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (6.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (1.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (1.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (1.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (2.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (1.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (2.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (1.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (2.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record_columns.html.erb (1.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_action_group.html.erb (1.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_actions.html.erb (2.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_record.html.erb (187.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_pagination.html.erb (0.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list.html.erb (1026.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/_list_with_header.html.erb (1295.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold_vho-3.1.4/frontends/default/views/list.html.erb within layouts/application (1766.3ms)
+Compiled bootstrap_and_overrides.css  (2085ms)  (pid 6883)
+Compiled active_scaffold_layout.css  (0ms)  (pid 6883)
+Completed 500 Internal Server Error in 5965ms
+
+ActionView::Template::Error (File to import not found or unreadable: jquery-ui.
+Load path: Sass::Rails::Importer(/Users/tprentis/Documents/IAI Sunray/sunray-master/app/assets/stylesheets/active_scaffold.css.scss)
+  (in /Users/tprentis/Documents/IAI Sunray/sunray-master/app/assets/stylesheets/active_scaffold.css.scss)):
+    2: %html
+    3:   %head
+    4:     %title Sunray Notice Application
+    5:     = stylesheet_link_tag   "application", :media => "all"
+    6:     = javascript_include_tag "application"
+    7:     = csrf_meta_tags
+    8:   %body
+  app/assets/stylesheets/active_scaffold.css.scss:13
+  app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml___1812982608484054892_70214101942080'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (351.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 17:53:27 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (1.2ms)[0m  SELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (0.7ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/_list_with_header.html.erb (9.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/list.html.erb within layouts/application (48.1ms)
+Completed 500 Internal Server Error in 157ms
+
+ActionView::Template::Error (Missing partial documents/list_header, application/list_header, active_scaffold_overrides/list_header, /list_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/tprentis/Documents/IAI Sunray/sunray-master/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.6/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views"
+):
+    1: <div id="<%= active_scaffold_id -%>" class="<%= as_main_div_class %>" <%= "data-eid=#{id_from_controller(params[:eid])}" if params[:eid]%>>
+    2:   <div class="active-scaffold-header">
+    3:     <%= render :partial => 'list_header' %>
+    4:   </div>
+    5:   <table cellpadding="0" cellspacing="0">
+    6:     <tbody class="before-header" id="<%= before_header_id -%>">
+  actionpack (3.2.8) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.8) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:339:in `find_template'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:333:in `find_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:222:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/_list_with_header.html.erb:3:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views__list_with_header_html_erb___3284127784102755908_70174263457380'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/list.html.erb:1:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views_list_html_erb__3611854022105047355_70174263309480'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_controller_rendering.rb:14:in `render_with_active_scaffold'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:33:in `list_respond_to_html'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:188:in `block (3 levels) in respond_to_action'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:184:in `respond_to_action'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:25:in `list'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:9:in `index'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:524:in `_run__1871841618716154205__process_action__2240576188010256213__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  sass (3.2.3) lib/sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1239008952228041129__call__4114298416577676442__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.5ms)
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 17:54:00 -0500
+Processing by DocumentsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "documents" 
+  [1m[36mDocument Load (0.5ms)[0m  [1mSELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0[0m
+  [1m[35mDocumentparent Load (0.3ms)[0m  SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/_list_with_header.html.erb (4.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/list.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (Missing partial documents/list_header, application/list_header, active_scaffold_overrides/list_header, /list_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/tprentis/Documents/IAI Sunray/sunray-master/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.6/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views"
+):
+    1: <div id="<%= active_scaffold_id -%>" class="<%= as_main_div_class %>" <%= "data-eid=#{id_from_controller(params[:eid])}" if params[:eid]%>>
+    2:   <div class="active-scaffold-header">
+    3:     <%= render :partial => 'list_header' %>
+    4:   </div>
+    5:   <table cellpadding="0" cellspacing="0">
+    6:     <tbody class="before-header" id="<%= before_header_id -%>">
+  actionpack (3.2.8) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.8) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:339:in `find_template'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:333:in `find_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:222:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/_list_with_header.html.erb:3:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views__list_with_header_html_erb___3284127784102755908_70174263457380'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/list.html.erb:1:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views_list_html_erb__3611854022105047355_70174263309480'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_controller_rendering.rb:14:in `render_with_active_scaffold'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:33:in `list_respond_to_html'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:188:in `block (3 levels) in respond_to_action'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:184:in `respond_to_action'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:25:in `list'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:9:in `index'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:524:in `_run__1871841618716154205__process_action__2240576188010256213__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  sass (3.2.3) lib/sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__1239008952228041129__call__4114298416577676442__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 18:03:47 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (58.4ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (8.2ms)[0m  SELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (49.9ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/_list_with_header.html.erb (5.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views/list.html.erb within layouts/application (102.8ms)
+Completed 500 Internal Server Error in 502ms
+
+ActionView::Template::Error (Missing partial documents/list_header, application/list_header, active_scaffold_overrides/list_header, /list_header with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/tprentis/Documents/IAI Sunray/sunray-master/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.6/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+  * "/Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.16/frontends/default/views"
+):
+    1: <div id="<%= active_scaffold_id -%>" class="<%= as_main_div_class %>" <%= "data-eid=#{id_from_controller(params[:eid])}" if params[:eid]%>>
+    2:   <div class="active-scaffold-header">
+    3:     <%= render :partial => 'list_header' %>
+    4:   </div>
+    5:   <table cellpadding="0" cellspacing="0">
+    6:     <tbody class="before-header" id="<%= before_header_id -%>">
+  actionpack (3.2.8) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.8) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:339:in `find_template'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:333:in `find_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:222:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/_list_with_header.html.erb:3:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views__list_with_header_html_erb___2001412845126538025_70122960296860'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:265:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:238:in `block in render'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/partial_renderer.rb:237:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:41:in `render_partial'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:15:in `render'
+  actionpack (3.2.8) lib/action_view/helpers/rendering_helper.rb:24:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_view_rendering.rb:103:in `render_with_active_scaffold'
+  haml (3.1.7) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+  active_scaffold (3.2.16) frontends/default/views/list.html.erb:1:in `___sers_tprentis__rvm_gems_ruby_______p____gems_active_scaffold________frontends_default_views_list_html_erb__420751675967988396_70122961663220'
+  actionpack (3.2.8) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.8) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.8) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/template_renderer.rb:18:in `render'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.8) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.8) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.8) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.8) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  active_scaffold (3.2.16) lib/active_scaffold/extensions/action_controller_rendering.rb:14:in `render_with_active_scaffold'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:33:in `list_respond_to_html'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:188:in `block (3 levels) in respond_to_action'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `call'
+  actionpack (3.2.8) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/core.rb:184:in `respond_to_action'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:25:in `list'
+  active_scaffold (3.2.16) lib/active_scaffold/actions/list.rb:9:in `index'
+  actionpack (3.2.8) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:524:in `_run__730843208428951912__process_action__3716578476012345306__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.8) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.8) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.8) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.8) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.8) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.8) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.8) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.8) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.8) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  sass (3.2.3) lib/sass/plugin/rack.rb:54:in `call'
+  warden (1.2.1) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.1) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.1) lib/warden/manager.rb:34:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4383959829669954606__call__2932418866233980351__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (62.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/documents" for 127.0.0.1 at 2012-12-15 18:10:21 -0500
+Processing by DocumentsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "documents" [0m
+  [1m[35mDocument Load (0.7ms)[0m  SELECT "documents".* FROM "documents" ORDER BY "documents"."state" ASC LIMIT 15 OFFSET 0
+  [1m[36mDocumentparent Load (0.6ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7, 5, 6)[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (3.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_header.html.erb (36.6ms)
+  [1m[35mDocumentparent Load (0.5ms)[0m  SELECT "documentparents".* FROM "documentparents" 
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_column_headings.html.erb (10.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_messages.html.erb (21.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (5.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (4.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (12.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (5.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (8.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (4.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (5.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (7.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (176.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_pagination.html.erb (1.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list.html.erb (377.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_with_header.html.erb (483.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/list.html.erb within layouts/application (553.2ms)
+Compiled jquery-ui.css  (0ms)  (pid 722)
+Compiled active_scaffold_extensions.css  (0ms)  (pid 722)
+Compiled active_scaffold.css  (3771ms)  (pid 722)
+Compiled account.css  (0ms)  (pid 722)
+Compiled accounts.css  (42ms)  (pid 722)
+Compiled active_scaffold-ie.css  (291ms)  (pid 722)
+Compiled active_scaffold_colors.css  (149ms)  (pid 722)
+Compiled active_scaffold_images.css  (6ms)  (pid 722)
+Compiled addresses.css  (13ms)  (pid 722)
+Compiled admins/bootstrap.css  (1ms)  (pid 722)
+Compiled admins/login.css  (0ms)  (pid 722)
+Compiled admins/form.css  (0ms)  (pid 722)
+Compiled admins/button.css  (0ms)  (pid 722)
+Compiled admins/icons.css  (0ms)  (pid 722)
+Compiled admins/bootstrap-login.min.css  (0ms)  (pid 722)
+Compiled admins/jquery.ui.all.css  (6ms)  (pid 722)
+Compiled admins/jquery-ui.custom.css  (0ms)  (pid 722)
+Compiled admins/jquery-ui-timepicker.css  (0ms)  (pid 722)
+Compiled admins/uniform.default.css  (0ms)  (pid 722)
+Compiled admins/circular-stat.css  (0ms)  (pid 722)
+Compiled admins/fullcalendar.css  (0ms)  (pid 722)
+Compiled admins/fullcalendar.print.css  (0ms)  (pid 722)
+Compiled fonts/icomoon/style.css  (0ms)  (pid 722)
+Compiled admins/main-style.css  (0ms)  (pid 722)
+Compiled admins/layout.css  (0ms)  (pid 722)
+Compiled admins/wizard.css  (0ms)  (pid 722)
+Compiled admins.css  (1656ms)  (pid 722)
+Compiled admins/admins.bootstrap-login.min.css  (0ms)  (pid 722)
+Compiled admins/admins.uniform.default.css  (0ms)  (pid 722)
+Compiled admins/bootstrap-login.css  (0ms)  (pid 722)
+Compiled admins/bootstrap-responsive.css  (0ms)  (pid 722)
+Compiled admins/bootstrap-responsive.min.css  (0ms)  (pid 722)
+Compiled admins/bootstrap.min.css  (0ms)  (pid 722)
+Compiled admins/customizer.css  (0ms)  (pid 722)
+Compiled admins/demo.css  (0ms)  (pid 722)
+Compiled admins/docs.css  (0ms)  (pid 722)
+Compiled admins/elfinder.css  (0ms)  (pid 722)
+Compiled admins/error.css  (0ms)  (pid 722)
+Compiled admins/error.min.css  (0ms)  (pid 722)
+Compiled admins/gallery.css  (0ms)  (pid 722)
+Compiled admins/jquery.ibutton.css  (0ms)  (pid 722)
+Compiled admins/login-style.css  (0ms)  (pid 722)
+Compiled admins/login.min.css  (0ms)  (pid 722)
+Compiled admins/lt-ie9.css  (0ms)  (pid 722)
+Compiled admins/mail.css  (0ms)  (pid 722)
+Compiled admins/minicolors.css  (0ms)  (pid 722)
+Compiled admins/misc.css  (0ms)  (pid 722)
+Compiled admins/mooncake.min.css  (0ms)  (pid 722)
+Compiled admins/plugins/elfinder.css  (0ms)  (pid 722)
+Compiled admins/plugins/fullcalendar.css  (0ms)  (pid 722)
+Compiled admins/plugins/minicolors.css  (0ms)  (pid 722)
+Compiled admins/plugins/plugins.min.css  (0ms)  (pid 722)
+Compiled admins/profile.css  (0ms)  (pid 722)
+Compiled admins/statistic.css  (0ms)  (pid 722)
+Compiled admins/table.css  (0ms)  (pid 722)
+Compiled admins/ui.css  (0ms)  (pid 722)
+Compiled admins/utils.css  (0ms)  (pid 722)
+Compiled admins/widget.css  (0ms)  (pid 722)
+Compiled dashboard.css  (24ms)  (pid 722)
+Compiled documentparts.css  (32ms)  (pid 722)
+Compiled gray-theme.css  (0ms)  (pid 722)
+Compiled scaffolds.css  (25ms)  (pid 722)
+Compiled simple_form.css  (0ms)  (pid 722)
+Compiled style.css  (0ms)  (pid 722)
+Compiled application.css  (11060ms)  (pid 722)
+Compiled admins/jquery-1.8.2.min.js  (1ms)  (pid 722)
+Compiled admins/bootstrap.js  (0ms)  (pid 722)
+Compiled admins/jquery.placeholder.js  (0ms)  (pid 722)
+Compiled admins/jquery.mousewheel.js  (0ms)  (pid 722)
+Compiled admins/template.js  (0ms)  (pid 722)
+Compiled admins/setup.js  (0ms)  (pid 722)
+Compiled admins/customizer.js  (0ms)  (pid 722)
+Compiled admins/jquery.uniform.js  (0ms)  (pid 722)
+Compiled admins/jquery-ui-1.8.24.js  (2ms)  (pid 722)
+Compiled admins/jquery-ui.custom.js  (0ms)  (pid 722)
+Compiled admins/jquery-ui-timepicker.js  (0ms)  (pid 722)
+Compiled admins/jquery.ui.touch-punch.js  (0ms)  (pid 722)
+Compiled admins/excanvas.js  (0ms)  (pid 722)
+Compiled admins/jquery.flot.js  (1ms)  (pid 722)
+Compiled admins/plugins/jquery.flot.tooltip.min.js  (0ms)  (pid 722)
+Compiled admins/plugins/jquery.flot.pie.min.js  (0ms)  (pid 722)
+Compiled admins/plugins/jquery.flot.resize.min.js  (0ms)  (pid 722)
+Compiled admins/circular-stat.js  (0ms)  (pid 722)
+Compiled admins/jquery.sparkline.js  (1ms)  (pid 722)
+Compiled admins/jquery.ibutton.js  (0ms)  (pid 722)
+Compiled admins/fullcalendar.js  (1ms)  (pid 722)
+Compiled admins/jquery.dataTables.js  (2ms)  (pid 722)
+Compiled admins/TableTools/TableTools.js  (0ms)  (pid 722)
+Compiled admins/dataTables.bootstrap.js  (0ms)  (pid 722)
+Compiled admins/dashboard.js  (0ms)  (pid 722)
+Compiled admins/jquery.validate.min.js  (0ms)  (pid 722)
+Compiled admins/wizard.min.js  (0ms)  (pid 722)
+Compiled admins/jquery.form.min.js  (0ms)  (pid 722)
+Compiled admins/form_wizard.js  (0ms)  (pid 722)
+Compiled jquery.js  (4ms)  (pid 722)
+Compiled jquery-ui.js  (3ms)  (pid 722)
+Compiled jquery_ujs.js  (0ms)  (pid 722)
+Compiled jquery-ui-timepicker-addon.js  (0ms)  (pid 722)
+Compiled jquery/active_scaffold.js  (0ms)  (pid 722)
+Compiled jquery/jquery.editinplace.js  (1ms)  (pid 722)
+ActiveScaffold: Missing datetime picker localization for your locale: en
+Compiled jquery/date_picker_bridge.js  (5ms)  (pid 722)
+Compiled jquery/draggable_lists.js  (0ms)  (pid 722)
+Compiled active_scaffold.js  (343ms)  (pid 722)
+Compiled application.js  (4694ms)  (pid 722)
+  Rendered shared/_user_nav.html.haml (1.7ms)
+Completed 200 OK in 18473ms (Views: 18412.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /application.css - 304 Not Modified (162ms)
+
+
+Started GET "/assets/account.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /account.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/accounts.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /accounts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold_extensions.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold_extensions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/active_scaffold-ie.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold-ie.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold_colors.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold_colors.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold_images.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold_images.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/addresses.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /addresses.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold_layout.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /active_scaffold_layout.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/login.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/login.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/form.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/form.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/icons.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/icons.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/bootstrap-login.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/bootstrap-login.min.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admins/button.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/button.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/jquery.ui.all.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/jquery.ui.all.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery-ui-timepicker.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/jquery-ui-timepicker.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-ui.custom.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/jquery-ui.custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/uniform.default.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/uniform.default.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/fullcalendar.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/fullcalendar.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/circular-stat.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/circular-stat.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/fullcalendar.print.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/fullcalendar.print.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fonts/icomoon/style.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /fonts/icomoon/style.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/admins/main-style.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/main-style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/layout.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins/layout.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:42 -0500
+Served asset /admins.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/admins/admins.bootstrap-login.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/admins.bootstrap-login.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/admins.uniform.default.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/admins.uniform.default.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/bootstrap-responsive.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/bootstrap-login.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/bootstrap-login.css - 304 Not Modified (65ms)
+
+
+Started GET "/assets/admins/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/bootstrap-responsive.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/wizard.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/wizard.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/customizer.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/customizer.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/demo.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/demo.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/docs.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/docs.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/elfinder.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/elfinder.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/error.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/error.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/error.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/error.min.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.ibutton.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.ibutton.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/gallery.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/gallery.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/login-style.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/login-style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/login.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/login.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/lt-ie9.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/lt-ie9.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/minicolors.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/minicolors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/mail.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/mail.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/misc.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/misc.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/mooncake.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/mooncake.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/elfinder.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/elfinder.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/fullcalendar.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/fullcalendar.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/plugins/plugins.min.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/plugins.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/profile.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/profile.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/plugins/minicolors.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/minicolors.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/statistic.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/statistic.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/table.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/table.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/ui.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/ui.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/utils.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/utils.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gray-theme.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /gray-theme.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /dashboard.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/documentparts.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /documentparts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/widget.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/widget.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/jquery.mousewheel.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.mousewheel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/simple_form.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /simple_form.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.placeholder.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.placeholder.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/template.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/template.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery.uniform.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.uniform.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/setup.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/setup.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/customizer.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/customizer.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/jquery-ui-1.8.24.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery-ui-1.8.24.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admins/jquery.ui.touch-punch.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.ui.touch-punch.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /style.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-ui-timepicker.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery-ui-timepicker.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.resize.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/jquery.flot.resize.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/excanvas.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/excanvas.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.tooltip.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/jquery.flot.tooltip.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/jquery.flot.pie.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/plugins/jquery.flot.pie.min.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/jquery.flot.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:43 -0500
+Served asset /admins/jquery.flot.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/circular-stat.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/circular-stat.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/fullcalendar.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/fullcalendar.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admins/jquery.sparkline.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.sparkline.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/TableTools/TableTools.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/TableTools/TableTools.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/jquery.validate.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.validate.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/wizard.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/wizard.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/dashboard.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/dashboard.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/jquery.form.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.form.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/form_wizard.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/form_wizard.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery-ui.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/draggable_lists.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery/draggable_lists.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/date_picker_bridge.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery/date_picker_bridge.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_scaffold.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /active_scaffold.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery-ui-timepicker-addon.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery-ui-timepicker-addon.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/active_scaffold.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery/active_scaffold.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /application.js - 304 Not Modified (107ms)
+
+
+Started GET "/assets/admins/jquery-1.8.2.min.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery-1.8.2.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery-ui.custom.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery-ui.custom.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/bootstrap.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admins/jquery.ibutton.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.ibutton.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/dataTables.bootstrap.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/dataTables.bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery.editinplace.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /jquery/jquery.editinplace.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/jquery.dataTables.js?body=1" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.dataTables.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admins/jquery.ui.base.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.ui.base.css - 404 Not Found (5ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admins/jquery.ui.base.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/admins/jquery.ui.theme.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/jquery.ui.theme.css - 404 Not Found (4ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/admins/jquery.ui.theme.css"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/tprentis/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/admins/layout.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/layout.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/button.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/button.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/form.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/form.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/table.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/table.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/misc.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/misc.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/admins/widget.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/widget.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admins/utils.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/utils.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/ui.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/ui.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/icons.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/icons.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/admins/statistic.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/statistic.css - 304 Not Modified (49ms)
+
+
+Started GET "/assets/admins/mail.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/mail.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/profile.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/profile.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admins/gallery.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/gallery.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admins/plugins/elfinder.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/plugins/elfinder.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/plugins/fullcalendar.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/plugins/fullcalendar.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/plugins/minicolors.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/plugins/minicolors.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/lt-ie9.css" for 127.0.0.1 at 2012-12-15 18:10:44 -0500
+Served asset /admins/lt-ie9.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admins/demo.css" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /admins/demo.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/customizer.css" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /admins/customizer.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admins/layout/bg/retina_wood.png" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /admins/layout/bg/retina_wood.png - 304 Not Modified (241ms)
+
+
+Started GET "/assets/active_scaffold/magnifier.png" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /active_scaffold/magnifier.png - 304 Not Modified (83ms)
+
+
+Started GET "/assets/active_scaffold/add.png" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /active_scaffold/add.png - 304 Not Modified (51ms)
+
+
+Started GET "/assets/logosunray.png" for 127.0.0.1 at 2012-12-15 18:10:45 -0500
+Served asset /logosunray.png - 304 Not Modified (191ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:10:46 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (437ms)
+
+
+Started GET "/documentparts?association=documentparts&document_id=5&parent_scaffold=documents&adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 18:11:30 -0500
+Processing by DocumentpartsController#index as JS
+  Parameters: {"association"=>"documentparts", "document_id"=>"5", "parent_scaffold"=>"documents", "adapter"=>"_list_inline_adapter"}
+  [1m[36mDocument Load (0.7ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36m (19.4ms)[0m  [1mSELECT COUNT(*) FROM "documentparts" WHERE "documentparts"."document_id" = 5[0m
+  [1m[35mDocumentpart Load (0.6ms)[0m  SELECT "documentparts".* FROM "documentparts" WHERE "documentparts"."document_id" = 5 ORDER BY "documentparts"."position" ASC LIMIT 15 OFFSET 0
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_header.html.erb (8.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_column_headings.html.erb (4.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_messages.html.erb (6.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (45.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (3.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (10.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (2.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (2.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (1.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (6.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (151.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_pagination.html.erb (0.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list.html.erb (185.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_with_header.html.erb (204.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (8.4ms)
+Completed 200 OK in 328ms (Views: 33.7ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:11:31 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documentparts/new?association=documentparts&document_id=5&parent_scaffold=documents&adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 18:11:39 -0500
+Processing by DocumentpartsController#new as JS
+  Parameters: {"association"=>"documentparts", "document_id"=>"5", "parent_scaffold"=>"documents", "adapter"=>"_list_inline_adapter"}
+  [1m[36mDocument Load (0.4ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1  [["id", "5"]]
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_messages.html.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (1.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.5ms)
+  Rendered documentparts/_form.html.erb (24.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_base_form.html.erb (82.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_create_form.html.erb (90.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (5.1ms)
+Completed 200 OK in 181ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:11:39 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documents/5/row?_method=get" for 127.0.0.1 at 2012-12-15 18:12:00 -0500
+Processing by DocumentsController#row as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mDocument Load (0.4ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  [1m[35mDocumentparent Load (0.3ms)[0m  SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" IN (7)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record_columns.html.erb (3.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_action_group.html.erb (2.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_actions.html.erb (8.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_record.html.erb (23.2ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_row.html.erb (28.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_update_calculations.js.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/row.js.erb (48.9ms)
+Completed 200 OK in 83ms (Views: 78.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:12:00 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documents/5/edit?adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 18:12:03 -0500
+Processing by DocumentsController#edit as JS
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"5"}
+  [1m[36mDocument Load (0.4ms)[0m  [1mSELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1[0m  [["id", "5"]]
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_messages.html.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (1.5ms)
+  [1m[35mDocumentparent Load (0.4ms)[0m  SELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" = 7 LIMIT 1
+  [1m[36mDocumentparent Load (0.2ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" [0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (2.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.7ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form_attribute.html.erb (0.3ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form.html.erb (82.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_form.html.erb (166.9ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_base_form.html.erb (181.0ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_update_form.html.erb (186.5ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.4ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (6.0ms)
+Completed 200 OK in 226ms (Views: 11.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:12:03 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
+
+
+Started GET "/documents/5?adapter=_list_inline_adapter" for 127.0.0.1 at 2012-12-15 18:12:11 -0500
+Processing by DocumentsController#show as JS
+  Parameters: {"adapter"=>"_list_inline_adapter", "id"=>"5"}
+  [1m[35mDocument Load (0.5ms)[0m  SELECT "documents".* FROM "documents" WHERE "documents"."id" = $1 LIMIT 1  [["id", "5"]]
+  [1m[36mDocumentparent Load (0.4ms)[0m  [1mSELECT "documentparents".* FROM "documentparents" WHERE "documentparents"."id" = 7 LIMIT 1[0m
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show_columns.html.erb (3.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show_columns.html.erb (11.8ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_show.html.erb (19.6ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_messages.html.erb (0.1ms)
+  Rendered /Users/tprentis/.rvm/gems/ruby-1.9.3-p194/gems/active_scaffold-3.2.17/frontends/default/views/_list_inline_adapter.html.erb (5.3ms)
+Completed 200 OK in 49ms (Views: 10.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/active_scaffold/indicator.gif" for 127.0.0.1 at 2012-12-15 18:12:11 -0500
+Served asset /active_scaffold/indicator.gif - 304 Not Modified (0ms)
