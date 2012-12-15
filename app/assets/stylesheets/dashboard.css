@@ -1,0 +1,58 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+  *= require admins/bootstrap
+  *= require admins/form
+  *= require admins/button
+  *= require admins/icons
+  *= require admins/bootstrap-login.min
+  *= require admins/jquery.ui.all
+  *= require admins/jquery-ui.custom
+  *= require admins/jquery-ui-timepicker
+  *= require admins/uniform.default
+  *= require admins/circular-stat
+  *= require admins/fullcalendar
+  *= require admins/fullcalendar.print
+  *= require fonts/icomoon/style
+  *= require admins/main-style
+  *= require admins/layout
+  *= require admins/widget
+  *= require admins/table
+  *= require admins/button
+  *= require admins/misc
+  *= require admins/utils
+  *= require admins/ui
+  *= require admins/icons
+  *= require admins/statistic
+  *= require admins/wizard
+  *= require admins/mail
+  *= require admins/profile
+  *= require admins/gallery
+  *= require admins/elfinder
+  *= require admins/minicolors
+  *= require admins/lt-ie9
+  *= require admins/demo
+  *= require admins/customizer
+  *= require_self
+
+ */
+
+/* Body
+================================================== */
+
+body
+{
+    background: url(/assets/admins/layout/bg/retina_wood.png); 
+    color: #444;
+    padding: 100px 0;
+    margin-top: -9em;
+}
+

@@ -1,0 +1,36 @@
+= link_to "Add a New Account", new_admins_account_path
+.row-fluid
+  .span12.widget
+    .widget-header
+      %span.title Current Accounts
+    .widget-content.table-container
+      %table#demo-dtable-02.table.table-striped
+        %thead
+          %tr
+            %th Name
+            %th Phone
+            %th Fax
+            %th Email
+            %th Active
+            %th Actions
+        %tbody
+          - accounts.each do |a|
+            %tr
+              %td= a.name
+              %td= a.phone
+              %td= a.fax
+              %td= a.email
+              %td= a.active
+              %td
+                = link_to "view", admins_account_path(a)
+                = link_to "edit", edit_admins_account_path(a)
+                = link_to 'Delete', admins_account_path(a), method: :delete, data: { confirm: 'Are you sure?' }
+        %tfoot
+          %tr
+            %th Name
+            %th Phone
+            %th Fax
+            %th Email
+            %th
+            %th
+= link_to "Back", :back

@@ -1,0 +1,1 @@
+<textarea class="part_content-input" id="record_part_content_" name="record[part_content]"></textarea>

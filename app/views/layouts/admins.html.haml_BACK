@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Admins Area
+    = stylesheet_link_tag    "account", :media => "all"
+    = javascript_include_tag "account"
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        = render 'shared/admin_user_nav'
+        .container
+          = image_tag("logosunray.png")
+    .container
+      %p.notice
+        = notice
+      %p.alert
+        = alert
+      Admins Area 2
+      = yield

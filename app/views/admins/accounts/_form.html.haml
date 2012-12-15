@@ -1,0 +1,45 @@
+.span12.widget
+  .widget-header
+    %span.title
+      %i.icol-wand
+      New Account Wizard
+    .toolbar
+  .widget-content.form-container
+    = form_for [:admins, account], :defaults => { :input_html => { :class => "form-horizontal wizard-form wizard-form-horizontal"}} do |a|
+
+      %fieldset.wizard-step
+        %legend.wizard-label
+          %i.icon-book
+          Basic Information
+        .control-group
+          = a.text_field :name
+        .control-group
+          = a.text_field :phone 
+          = a.text_field :fax
+        .control-group
+          = a.text_field :website
+        .control-group
+          = a.text_field :logo
+        .control-group
+          = a.text_field :description 
+
+      %fieldset.wizard-step
+        %legend.wizard-label
+          %i.icon-book
+          Addressess
+        .control-group
+        = a.fields_for :address do |add|
+          .control-group
+          = add.text_field :address
+          .control-group
+          = add.text_field :city
+          .control-group
+          = add.text_field :state
+          .control-group
+          = add.text_field :zip
+          .control-group
+          = add.text_field :phone
+          .control-group
+          = add.text_field :address_type
+        .form-actions.wizard-actions
+          = a.submit

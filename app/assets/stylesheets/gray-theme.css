@@ -1,0 +1,109 @@
+/*
+ ActiveScaffold Gray Theme
+ (c) 2007 Richard White <rrwhite@gmail.com>
+
+ ActiveScaffold is freely distributable under the terms of an MIT-style license.
+
+ For details, see the ActiveScaffold web site: http://www.activescaffold.com/
+
+*/
+
+/* Miscellaneous styling for active-scaffold */
+
+.active-scaffold {
+	margin-top: 100px;
+}
+
+.active-scaffold a:hover, .active-scaffold div.hover, .active-scaffold td span.hover {
+color: #000;
+}
+      
+/*.active-scaffold textarea {
+width: 250px;
+height: 75px;
+}
+
+.active-scaffold input {
+width: 250px;
+}
+*/
+.active-scaffold .rank-input {
+
+  display:block;
+
+}
+
+/* =========================*/
+.active-scaffold {
+	margin-top: 100px;
+}
+
+.active-scaffold textarea {
+width: 250px;
+height: 75px;
+}
+
+/* Header
+   ======================== */
+
+.gray-theme .active-scaffold-header {
+background-color: #222222 /* #1a1a1a; /*#3a3a3a;*/ /*#005CB8;*/
+}
+
+.gray-theme .active-scaffold-header h2 {
+color: #fff; 
+padding: 2px 5px 4px 5px;
+}
+
+.gray-theme .active-scaffold-header div.actions a {
+color: #fff;
+}
+
+.gray-theme .active-scaffold-header div.actions a.disabled {
+color: #fff;
+opacity: 0.5;
+}
+
+.gray-theme .active-scaffold-header div.actions a:hover {
+background-color: #A2A2A2; /*#378CDF;*/
+}
+
+.gray-theme .active-scaffold .active-scaffold-header,
+.gray-theme .active-scaffold .active-scaffold-footer {
+background-color:  #1F7F00;
+background: transparent;
+}
+
+.gray-theme .active-scaffold .active-scaffold-header h2 {
+color: #444;
+}
+
+.gray-theme .active-scaffold .active-scaffold-header div.actions a,
+.gray-theme .active-scaffold .active-scaffold-header div.actions a:visited {
+color: #06c;
+}
+
+.gray-theme .active-scaffold .active-scaffold-header div.actions a:hover {
+background-color: #000; /*#FAA732;*/
+}
+
+/* Footer
+   ========================== */
+
+.gray-theme .active-scaffold-footer {
+background-color: #3a3a3a; /*#005CB8;*/
+color: #ccc;
+}
+
+.gray-theme .active-scaffold-footer .active-scaffold-records {
+margin-left: 5px;
+}
+
+.gray-theme .active-scaffold-footer a,
+.gray-theme .active-scaffold-footer a:visited {
+color: #fff;
+}
+
+.gray-theme .active-scaffold-footer a:hover {
+background-color: #378CDF;
+}

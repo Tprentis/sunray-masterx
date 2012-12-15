@@ -1,0 +1,28 @@
+= link_to "Add a New Document", new_document_path
+.row-fluid
+  .span12.widget
+    .widget-header
+      %span.title List of Documents
+    .widget-content.table-container
+      %table#demo-dtable-02.table.table-striped
+        %thead
+          %tr
+            %th State
+            %th Document Name
+            %th Document Legal Name
+            %th Type of Document
+            %th Actions
+        %tbody
+          - documents.each do |a|
+            %tr
+              %td= a.state
+              %td= a.name
+              %td= a.type
+              %td= a.soft_letter
+              
+              %td
+                = link_to "view", document_path(a)
+                = link_to "edit", edit_document_path(a)
+                = link_to 'Delete', document_path(a), method: :delete, data: { confirm: 'Are you sure?' }
+       
+= link_to "Back", :back

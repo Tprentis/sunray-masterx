@@ -1,0 +1,60 @@
+   <br /> <br /> <br /> <br /> <br /> <br />
+   <div id="login-wrap">
+
+		<div id="login-ribbon"><i class="icon-lock"></i></div>
+
+		<div id="login-buttons">
+			<div class="btn-wrap">
+				<button type="button" class="btn btn-inverse" data-target="#login-form"><i class="icon-key"></i></button>
+			</div>
+			<div class="btn-wrap">
+				<button type="button" class="btn btn-inverse"data-target="#forget-form"><i class="icon-question-sign"></i></button>
+			</div>
+		</div>
+
+		<div id="login-inner">
+
+			<div id="login-circle">
+				<section id="login-form" class="login-inner-form active" data-angle="0">
+
+					<h1>Login</h1>
+					<%= form_for(resource, :as => resource_name, :url => admin_session_path) do |f| %>
+						<div class="control-group">
+							<%= f.text_field :email, :id => 'input-username', :class => 'big' %>
+							<%= f.password_field :password, :id => 'input-password', :class => 'big' %>
+						</div>
+						<div class="control-group">
+							 <% if devise_mapping.rememberable? -%>
+   								<%= f.check_box :remember_me, :class => 'uniform' %> <%= f.label :remember_me %>
+  							 <% end -%>
+						</div>
+						<div class="form-actions">
+							 <%= f.submit "Log in", :class => 'btn btn-success btn-block btn-large' %>
+						</div>
+				</section>
+				
+				<section id="forget-form" class="login-inner-form" data-angle="180">
+					<h1>Reset Password</h1>
+					<form class="form-vertical" action="dashboard.html">
+						<div class="control-group">
+							<div class="controls">
+								<input type="text" class="big" placeholder="Enter Your Email...">
+							</div>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn btn-danger btn-block btn-large">Reset</button>
+						</div>
+					</form>
+					<% end %>
+				</section>
+			</div>
+
+		</div>
+
+    </div>
+
+
+
+
+
+<%= render "devise/shared/links" %>
