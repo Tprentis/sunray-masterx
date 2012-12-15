@@ -12,7 +12,7 @@ $disabled_color: #999 !default;
 $actions_disabled_color: #666 !default;
 $link_color: #06c !default;
 $hover_bg: #FFFFBB !default;
-$header_color: #555 !default;
+$header_color: #000 !default;
 
 $column_header_bg: $header_color !default;
 $column_header_link_color: #fff !default;
@@ -27,7 +27,7 @@ $column_color: #333 !default;
 $column_empty_color: #999 !default;
 $column_border_color: #FAFAFA !default; 
 $column_even_border_color: #D8D8D8 !default;
-$column_actions_border_color: #D8D8D8 !default;
+$column_actions_border_color: #000 !default;
 
 $column_sorted_bg: #FAFAFA !default;
 $column_sorted_border_color: #000 !default; 
@@ -51,7 +51,7 @@ $nested_footer_color: #444 !default;
 $nested_column_bg: #ECFFE7 !default;
 $nested_column_border_color: $column_border_color !default;
 
-$second_nested_bg: #FFFFBB !default;
+$second_nested_bg: #265D4C !default;
 $second_nested_border_color: #DDDF37 !default;
 
 $third_nested_bg: $nested_bg !default;
@@ -80,7 +80,7 @@ $draggable_list_bg: #FFFF88 !default;
 $draggable_list_selected_bg: #7FCF00 !default;
 $checkbox_list_bg: #fff !default;
 
-$subform_color: #fff !default; 
+$subform_color: #000 !default; 
 $subform_header_color: $header_color !default;
 $subform_footer_color: $subform_color !default;
 
@@ -318,7 +318,7 @@ color: $label_color;
 
 .active-scaffold h4,
 .active-scaffold h5 {
-color: #fff; /*$form_title_color;*/
+color: $form_title_color;
 }
 
 /* Form :: Fields
@@ -351,7 +351,7 @@ border-color: $input_error_border_color;
 }
 
 .active-scaffold input.example {
-color: #fff; /*$placeholder_color;*/
+color: #000; /*$placeholder_color;*/
 }
 
 .active-scaffold select:focus,
@@ -376,7 +376,7 @@ background-color: $draggable_list_selected_bg;
    ============================== */
 
 .active-scaffold .sub-form table th {
-color: #fff; /*$subform_header_color;*/
+color: $subform_header_color;
 }
 
 .active-scaffold .sub-form .checkbox-list {

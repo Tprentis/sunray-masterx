@@ -360,7 +360,7 @@ font: bold 11px verdana, sans-serif;
 }
 
 .active-scaffold .active-scaffold .view {
-background-color: #0044CC; /*transparent */
+/* background-color: #D2E6DB; */
 padding: 0px;
 border: none;
 }

@@ -10,9 +10,9 @@ gem 'rake', '~> 10.0.1'
 
 
 gem 'jquery-rails'
-gem 'active_scaffold'
+gem 'active_scaffold', '3.2.17'
 gem 'acts_as_list'
-
+gem 'tinymce-rails'
 
 group :development, :test do
   gem 'rspec-rails'

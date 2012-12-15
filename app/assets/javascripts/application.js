@@ -43,9 +43,4 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require active_scaffold
-  ActiveScaffold.highlight = function(element) { 
-    if (typeof(element) == 'string') element = jQuery('#' + element); 
-    if (typeof(element.effect) == 'function') { 
-      element.effect("highlight", {change_color_option}, 3000); 
-    } 
-  };  
+//= require tinymce-jquery

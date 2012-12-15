@@ -3,7 +3,7 @@ class DocumentsController < ApplicationController
     
 
     active_scaffold :document do |config|
-      config.theme = :gray 
+    #  config.theme = :gray 
        
       config.list.page_links_inner_window = true
       config.list.sorting = { :state => :asc }

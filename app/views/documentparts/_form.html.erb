@@ -44,7 +44,7 @@ $.fn.insertAtCaret = function (myValue) {
   show_unauthorized_columns = active_scaffold_config.send(form_action).show_unauthorized_columns
 %>
 
-<div style="float: left; padding-left: 5em;">
+<div style="float: left; padding-left: 2em;">
 <ol class="form" <%= "id=#{subsection_id}" unless subsection_id.nil? %> <%= "style=\"display: none;\"".html_safe if columns.collapsed %>>
 <div>
   <% columns.each :for => @record, :crud_type => (:read if show_unauthorized_columns) do |column| %>
@@ -71,25 +71,30 @@ $.fn.insertAtCaret = function (myValue) {
 </div>  
 </ol>
 </div>
-<div style="background-color: #DAFFCD; float: left; margin-top: 0; padding: 5em;">
+<div style="background-color: #DAFFCD; float: left; margin-top: 0; padding-left: 2em;">
 <fieldset>
 	<legend>Drag and Drop to Insert into Part Content</legend>
 	<ul id="DragWordList">
 		<div style="float: left;">
-		<li>{legal description}</li>	
-		<li>{job name}</li>
-		<li>{job number}</li>
-		<li>{job branch number}</li>
-		<li>{job description}</li>
+			<li>{legal description}</li>	
+			<li>{job name}</li>
+			<li>{job number}</li>
+			<li>{job branch number}</li>
+			<li>{job description}</li>
+			<ul> </ul>
+			<u>Text Format Codes</u>
+			<li>[B] [/B]</li>
+			<li>[I] [/I]</li>
+			<li>[U] [/U]</li>		
 		</div>
 		<div style="float: left; padding-left: 5em">
-		<li>{job address1}</li>
-		<li>{job address2}</li>
-		<li>{job city}</li>
-		<li>{job state}</li>
-		<li>{job zip}</li>
-		<li>{job county}</li>
-		<li>{job additional info}</li>
+			<li>{job address1}</li>
+			<li>{job address2}</li>
+			<li>{job city}</li>
+			<li>{job state}</li>
+			<li>{job zip}</li>
+			<li>{job county}</li>
+			<li>{job additional info}</li>
 		</div>
 	</ul>
 </fieldset>
