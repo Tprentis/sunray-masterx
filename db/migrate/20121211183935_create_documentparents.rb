@@ -1,4 +1,4 @@
-class CreateDocumentParents < ActiveRecord::Migration
+class CreateDocumentparents < ActiveRecord::Migration
   def change
     create_table :documentparents do |t|
       t.string :name
