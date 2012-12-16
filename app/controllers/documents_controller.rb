@@ -42,7 +42,6 @@ class DocumentsController < ApplicationController
       columns[:ariela_signature].label = "Ariela Signature ?"  
       
       config.nested.add_link(:documentparts).label = "Document Parts"
-     
       
       config.create.label = "Create New Document"  
       config.create.columns = :state,           

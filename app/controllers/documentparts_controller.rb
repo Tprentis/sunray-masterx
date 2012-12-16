@@ -8,8 +8,12 @@ class DocumentpartsController < ApplicationController
        
       columns[:part_paragraph_header].label = "Part Paragraph Header"
    
-      config.columns[:position].form_ui = :number
+
       columns[:position].label = "Part Position in Document"   
+
+      columns[:position].form_ui = :select 
+      columns[:position].options[:options] = (1..99)
+
       columns[:position].inplace_edit = true
       
       config.create.columns = :part_paragraph_header,
