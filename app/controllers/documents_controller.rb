@@ -63,7 +63,7 @@ class DocumentsController < ApplicationController
                            :add_completed_date,
                            :add_todays_date
        end              
-                            
+                          
       config.update.label = "Update Document"  
       config.update.columns = :state, 
                            :documentparent, 

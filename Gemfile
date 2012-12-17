@@ -12,7 +12,7 @@ gem 'rake', '~> 10.0.1'
 gem 'jquery-rails'
 gem 'active_scaffold', '3.2.17'
 gem 'acts_as_list'
-
+gem "pdfkit"
 
 group :development, :test do
   gem 'rspec-rails'

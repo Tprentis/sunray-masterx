@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214002810) do
+ActiveRecord::Schema.define(:version => 20121216212551) do
 
   create_table "accounts", :force => true do |t|
     t.string   "name",              :default => "", :null => false
@@ -98,6 +98,10 @@ ActiveRecord::Schema.define(:version => 20121214002810) do
     t.text     "part_content"
     t.datetime "created_at",            :null => false
     t.datetime "updated_at",            :null => false
+    t.integer  "top_margin"
+    t.integer  "bottom_margin"
+    t.integer  "left_margin"
+    t.integer  "right_margin"
   end
 
   create_table "documents", :force => true do |t|
