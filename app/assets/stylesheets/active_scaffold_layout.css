@@ -686,7 +686,7 @@ border: solid 1px;
 }
 
 .active-scaffold input.text-input {
-padding: 2px;
+padding: 0px;
 }
 
 .active-scaffold .fieldWithErrors input,
