@@ -53,4 +53,14 @@ class DocumentpartsController < ApplicationController
                            :right_margin
 
   end
+  
+  def pdf_document
+    @docs = Documentpart.where("document_id = ?", params[document_id])
+    @pdf = '<head><meta name="pdfkit-orientation" content="Portrait"/></head>'
+    @docs.each do |p|
+      @pdf << p.part_content
+    end  
+    @printed_document = PDFKit.new(@pdf)
+  end  
+
 end

@@ -1,7 +1,7 @@
 PDFKit.configure do |config|
   
     #if your site is hosted on heroku or any other hosting server which is 64bit
-    config.wkhtmltopdf = Rails.root.join('bin', 'wkhtmltopdf-amd64').to_s
+  config.wkhtmltopdf = Rails.root.join('bin', 'wkhtmltopdf-amd64').to_s
   
   config.default_options = {
     :encoding=>"UTF-8",
@@ -13,3 +13,4 @@ PDFKit.configure do |config|
     :disable_smart_shrinking=> false
   }
 end
+

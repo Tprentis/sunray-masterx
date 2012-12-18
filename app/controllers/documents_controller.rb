@@ -45,7 +45,7 @@ class DocumentsController < ApplicationController
       columns[:ariela_signature].label = "Ariela Signature?"  
       
       config.nested.add_link(:documentparts).label = "Document Parts"
-      
+     
       config.create.label = "Create New Document"  
       config.create.columns = :state,           
                            :documentparent,        
@@ -74,6 +74,7 @@ class DocumentsController < ApplicationController
                            :document_type,
                            :default_amount                           
       config.update.columns.add_subgroup "Options" do |options_group|
+        options_group.collapsed = true
         options_group.add :signer,
                            :delivery_date_on_notice,
                            :total_amount_of_job,
@@ -135,6 +136,5 @@ class DocumentsController < ApplicationController
             end 
  
 
- 
                 
 end  

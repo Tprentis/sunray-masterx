@@ -9,5 +9,6 @@ class Documentpart < ActiveRecord::Base
   def to_label
     "#{part_paragraph_header}"
   end
-  
+    
+
 end

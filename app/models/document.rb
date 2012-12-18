@@ -9,5 +9,6 @@ class Document < ActiveRecord::Base
   def to_label
     "#{document_legal_name}"
   end
+  
     
 end
